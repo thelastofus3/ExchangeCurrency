@@ -17,6 +17,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static Serves.FindService.lastIdInsert;
+
 public class ExchangeRateServlet {
     private PreparedStatement statement;
     private ObjectMapper objectMapper = new ObjectMapper();
@@ -82,7 +84,7 @@ public class ExchangeRateServlet {
 
 
 
-            statement.setInt(1,lastIdInsert());
+            statement.setInt(1, lastIdInsert());
             statement.setInt(2,baseCurrencyId);
             statement.setInt(3, targetCurrencyId);
             statement.setDouble(4,rateId);
@@ -130,21 +132,5 @@ public class ExchangeRateServlet {
             ErrorMessage.sendErrorMessage(resp,500,"Internal Server Error");
         }
         return returnValue;
-    }
-    public int lastIdInsert(){
-        ConnectionDB connection = new ConnectionDB();
-        int lastId = -1;
-        try {
-            String SQL = "SELECT MAX(ID) FROM exchangerates";
-            statement = connection.getConnection().prepareStatement(SQL);
-
-            ResultSet resultSet = statement.executeQuery();
-            if(resultSet.next()){
-                lastId = resultSet.getInt(1) ;
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-        return lastId+1;
     }
 }

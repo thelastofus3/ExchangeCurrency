@@ -64,4 +64,20 @@ public class FindService {
         }
         return -2;
     }
+    public static int lastIdInsert(){
+        ConnectionDB connection = new ConnectionDB();
+        int lastId = 0;
+        try {
+            String SQL = "SELECT MAX(ID) FROM exchangerates";
+            PreparedStatement statement = connection.getConnection().prepareStatement(SQL);
+
+            ResultSet resultSet = statement.executeQuery();
+            if(resultSet.next()){
+                lastId = resultSet.getInt(1) ;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return lastId+1;
+    }
 }

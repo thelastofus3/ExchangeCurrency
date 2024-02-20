@@ -16,6 +16,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static Serves.FindService.lastIdInsert;
+
 public class CurrenciesServlet {
     private PreparedStatement statement;
     private ObjectMapper objectMapper = new ObjectMapper();
@@ -109,21 +111,5 @@ public class CurrenciesServlet {
             ErrorMessage.sendErrorMessage(resp,500,"Internal Server Error");
         }
         return returnValue;
-    }
-    public int lastIdInsert(){
-        ConnectionDB connection = new ConnectionDB();
-        int lastId = -1;
-        try {
-            String SQL = "SELECT MAX(ID) FROM currencies";
-            statement = connection.getConnection().prepareStatement(SQL);
-
-            ResultSet resultSet = statement.executeQuery();
-            if(resultSet.next()){
-                lastId = resultSet.getInt(1) ;
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-        return lastId+1;
     }
 }
