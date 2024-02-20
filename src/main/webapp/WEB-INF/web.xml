@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+<!--    <servlet>-->
+<!--        <servlet-name>FirstServlet</servlet-name>-->
+<!--        <servlet-class>com.javaee.javaeetest.FirstServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>FirstServlet</servlet-name>-->
+<!--        <url-pattern>/test-servlet</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+<!--    <servlet>-->
+<!--        <servlet-name>FirstJSP</servlet-name>-->
+<!--        <jsp-file>/testJSP.jsp</jsp-file>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>FirstJSP</servlet-name>-->
+<!--        <url-pattern>/test-jsp</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+<!--    <servlet>-->
+<!--        <servlet-name>SetCookiesServlet</servlet-name>-->
+<!--        <servlet-class>test.manipulationDb.cookies.SetCookiesServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>SetCookiesServlet</servlet-name>-->
+<!--        <url-pattern>/set-cookies</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+<!--    <servlet>-->
+<!--        <servlet-name>GetCookiesServlet</servlet-name>-->
+<!--        <servlet-class>test.manipulationDb.cookies.GetCookiesServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>GetCookiesServlet</servlet-name>-->
+<!--        <url-pattern>/get-cookies</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+<!--    <servlet>-->
+<!--        <servlet-name>DeleteCookiesServlet</servlet-name>-->
+<!--        <servlet-class>test.manipulationDb.cookies.DeleteCookiesServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>DeleteCookiesServlet</servlet-name>-->
+<!--        <url-pattern>/delete-cookies</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+<!--    <servlet>-->
+<!--        <servlet-name>LibraryServlet</servlet-name>-->
+<!--        <servlet-class>test.manipulationDb.cookies.LibraryServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>LibraryServlet</servlet-name>-->
+<!--        <url-pattern>/library</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+
+<!--    <servlet>-->
+<!--        <servlet-name>IndexJSP</servlet-name>-->
+<!--        <jsp-file>/index.jsp</jsp-file>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>IndexJSP</servlet-name>-->
+<!--        <url-pattern>/index-jsp</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+<!--    <servlet>-->
+<!--        <servlet-name>createPerson</servlet-name>-->
+<!--        <jsp-file>/createPerson.jsp</jsp-file>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>createPerson</servlet-name>-->
+<!--        <url-pattern>/createPerson-jsp</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+</web-app>
